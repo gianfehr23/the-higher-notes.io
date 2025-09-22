@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Higher Notes: Spotify Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/images/laloquera.png">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="start-screen">
+        
+        
+        
+        
+        
+        <div class="main-container">
+            <!-- Header with title -->
+            <div class="header-section">
+                <div class="title-section">
+                    <h1 class="main-title">
+                        <span class="title-line">
+                            <span class="title-more">The</span>
+                            <span class="title-or">Higher</span>
+                        </span>
+                        <span class="title-line">
+                            <span class="title-less">Notes</span>
+                        </span>
+                    </h1>
+                    <div class="subtitle">SPOTIFY EDITION</div>
+                </div>
+            </div>
+            
+            <!-- Game Categories Grid -->
+            <div class="game-categories-section">
+                <div class="categories-grid">
+                    
+                    <!-- Spotify Monthly Listeners - Available -->
+                    <div class="category-card available" data-mode="spotify">
+                        <img src="https://media.glamour.mx/photos/67a02291b30290c5da5f2ef8/16:9/w_2560%2Cc_limit/Billie-Eilish-presentaci%25C3%25B3n-grammys-2025jpg.jpg" alt="Billie Eilish" class="category-photo" style="width:60px;height:60px;border-radius:50%;margin-bottom:8px;object-fit:cover;">
+                        <div class="trending-badge">
+                            <span class="trending-text">🔥 TRENDING</span>
+                        </div>
+                        <div class="category-icon spotify-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">SPOTIFY MONTHLY LISTENERS</h3>
+                        <p class="category-description">Guess the monthly listeners of the most famous Spotify artists.</p>
+                        <button class="category-btn play-btn" id="play-now-btn">
+                            <span class="btn-text">PLAY NOW</span>
+                            <span class="btn-icon">▶</span>
+                        </button>
+                    </div>
+
+                    <!-- YouTube Subscribers - Coming Soon -->
+                    <div class="category-card coming-soon" data-mode="youtube">
+                        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2024/12/mrbeast-4278377.jpg?tf=3840x" alt="MrBeast" class="category-photo" style="width:60px;height:60px;border-radius:50%;margin-bottom:8px;object-fit:cover;">
+                        <div class="coming-soon-badge">
+                            <span class="badge-text">COMING SOON</span>
+                        </div>
+                        <div class="category-icon youtube-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">YOUTUBERS</h3>
+                        <p class="category-description">Guess who has more subscribers with the most famous YouTubers.</p>
+                        <button class="category-btn disabled-btn" disabled>
+                            <span class="btn-text">COMING SOON</span>
+                        </button>
+                    </div>
+
+                    <!-- Country Population - Coming Soon -->
+                    <div class="category-card coming-soon" data-mode="countries">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" alt="Argentina" class="category-photo" style="width:60px;height:60px;border-radius:50%;margin-bottom:8px;object-fit:cover;">
+                        <div class="coming-soon-badge">
+                            <span class="badge-text">COMING SOON</span>
+                        </div>
+                        <div class="category-icon country-icon">
+                            <span class="icon-emoji">🌍</span>
+                        </div>
+                        <h3 class="category-title">POPULATION BY COUNTRY</h3>
+                        <p class="category-description">Guess which country has a higher population. Based on population...</p>
+                        <button class="category-btn disabled-btn" disabled>
+                            <span class="btn-text">COMING SOON</span>
+                        </button>
+                    </div>
+
+                    <!-- Net Worth - Coming Soon -->
+                    <div class="category-card coming-soon" data-mode="networth">
+                        <img src="https://images.axios.com/Ftyt35Vk0Lg4kl-rxC32CN7UnJA=/0x0:4220x2374/1920x1080/2025/07/10/1752108104753.jpg?w=3840" alt="Elon Musk" class="category-photo" style="width:60px;height:60px;border-radius:50%;margin-bottom:8px;object-fit:cover;">
+                        <div class="coming-soon-badge">
+                            <span class="badge-text">COMING SOON</span>
+                        </div>
+                        <div class="category-icon money-icon">
+                            <span class="icon-emoji">💰</span>
+                        </div>
+                        <h3 class="category-title">NET WORTH OF PEOPLE</h3>
+                        <p class="category-description">Who is the richest? Check it out!</p>
+                        <button class="category-btn disabled-btn" disabled>
+                            <span class="btn-text">COMING SOON</span>
+                        </button>
+                    </div>
+
+                    <!-- Movies - Coming Soon -->
+                    <div class="category-card coming-soon" data-mode="movies">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg" alt="Batman" class="category-photo" style="width:60px;height:60px;border-radius:50%;margin-bottom:8px;object-fit:cover;">
+                        <div class="coming-soon-badge">
+                            <span class="badge-text">COMING SOON</span>
+                        </div>
+                        <div class="category-icon movie-icon">
+                            <span class="icon-emoji">🎬</span>
+                        </div>
+                        <h3 class="category-title">MOVIE BOX OFFICE</h3>
+                        <p class="category-description">Guess which movie made more money at the box office.</p>
+                        <button class="category-btn disabled-btn" disabled>
+                            <span class="btn-text">COMING SOON</span>
+                        </button>
+                    </div>
+
+                    <!-- Sports - Coming Soon -->
+                    <div class="category-card coming-soon" data-mode="sports">
+                        <img src="https://assets.goal.com/images/v3/blt1d3dcc63468d4c3b/crop/MM5DCNJTGY5DQNRUHJXG653FHIYTKMZ2GM3Q====/Lionel%20Messi%20Miami%202024.jpg" alt="Messi" class="category-photo" style="width:60px;height:60px;border-radius:50%;margin-bottom:8px;object-fit:cover;">
+                        <div class="coming-soon-badge">
+                            <span class="badge-text">COMING SOON</span>
+                        </div>
+                        <div class="category-icon sports-icon">
+                            <span class="icon-emoji">⚽</span>
+                        </div>
+                        <h3 class="category-title">SPORTS STATS</h3>
+                        <p class="category-description">Compare sports statistics and achievements.</p>
+                        <button class="category-btn disabled-btn" disabled>
+                            <span class="btn-text">COMING SOON</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Screen -->
+    <div id="auth-screen" class="auth-screen hidden">
+        <div class="auth-card">
+            <button id="auth-back-btn" class="auth-back-btn" title="Back to game modes">
+                <span class="back-arrow">←</span>
+                <span class="back-text">Back</span>
+            </button>
+            <h2 class="auth-title">Welcome</h2>
+            <p class="auth-sub">Create an account or log in to play</p>
+            <div class="auth-form">
+                <input id="auth-username" class="auth-input" type="text" placeholder="Username" autocomplete="username">
+                <input id="auth-password" class="auth-input" type="password" placeholder="Password" autocomplete="current-password">
+            </div>
+            <div class="auth-actions">
+                <button id="auth-register-btn" class="auth-btn primary">Register</button>
+                <button id="auth-login-btn" class="auth-btn">Login</button>
+            </div>
+            <p id="auth-message" class="auth-message"></p>
+        </div>
+    </div>
+    <main class="game-container">
+        <h1 class="title">The Higher Notes</h1>
+        <div class="scores">
+            <h2 id="scoreText" class="score-text">Score: 0</h2>
+            <h2 id="highScoreText" class="score-text">Highscore: 0</h2>
+            <h2 id="userText" class="score-text">User: -</h2>
+        </div>
+        <div class="cards-container">
+            <div id="artist1-card" class="artist-card">
+                <img id="artist-img1" class="artist-img" src="" alt="Artista 1">
+                <h3 id="artist-name1" class="artist-name"></h3>
+                <p class="artist-question-text">has</p>
+                <p class="artist-question-text">monthly listeners</p>
+                <p id="stat-value1" class="stat-value"></p>
+            </div>
+            <div class="vs-divider">VS</div>
+            <div id="artist2-card" class="artist-card">
+                <img id="artist-img2" class="artist-img" src="" alt="Artista 2">
+                <h3 id="artist-name2" class="artist-name-bottom"></h3>
+                <div id="artist2-question" class="artist2-state">
+                    <p class="artist-question-text">has</p>
+                    <h3 class="artist-question-text">monthly listeners</h3>
+                    <div class="buttons">
+                        <button id="more-btn" class="more-btn">Higher</button>
+                        <button id="less-btn" class="less-btn">Lower</button>
+                    </div>
+                </div>
+                <div id="artist2-stats" class="artist2-state hidden">
+                    <p class="artist-question-text">has</p>
+                    <p class="artist-question-text">monthly listeners</p>
+                    <p id="stat-value2" class="stat-value"></p>
+                    <p id="artist-name2-stats" class="stat-label"></p>
+                </div>
+            </div>
+        </div>
+        <div id="feedback-icon" class="feedback-icon hidden">
+            <div id="correct-checkmark" class="feedback-check" style="display: none;">✓</div>
+            <div id="incorrect-cross" class="feedback-cross" style="display: none;">✗</div>
+        </div>
+    </main>
+    <div id="end-screen" class="end-screen hidden">
+        <div id="end-screen-gif" class="end-screen-gif"></div>
+        <div class="overlay"></div>
+        <div class="end-content">
+            <h2 id="end-screen-message"></h2>
+            <p id="your-score-text"></p>
+            <p id="your-highscore-text"></p>
+            <button id="play-again-btn" class="play-again-btn">Play Again </button>
+        </div>
+    </div>
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getFirestore, collection, addDoc, getDocs, query, orderBy, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBkXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", // Necesitas configurar esto
+            authDomain: "your-project.firebaseapp.com",
+            projectId: "your-project-id",
+            storageBucket: "your-project.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:abcdefghijklmnop"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Make Firebase functions globally available
+        window.firebaseDB = db;
+        window.firebaseCollection = collection;
+        window.firebaseAddDoc = addDoc;
+        window.firebaseGetDocs = getDocs;
+        window.firebaseQuery = query;
+        window.firebaseOrderBy = orderBy;
+        window.firebaseDoc = doc;
+        window.firebaseSetDoc = setDoc;
+        window.firebaseGetDoc = getDoc;
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+<div class="social-bar">
+  <a href="https://www.instagram.com/fehr_gian/" target="_blank" title="Instagram">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+  </a>
+</div>
